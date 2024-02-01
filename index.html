@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles/reset.css">
+    <link rel="stylesheet" href="./assets/styles/style.css" id="switch-theme">
+    <title>Decodificador</title>
+</head>
+<body>
+    <header>
+        <h1>Decodificador de Texto</h1>
+        <div class= "header__theme-switch">
+            <input type="checkbox" name="switch" id="switch" onchange="changeTheme()">
+            <label id="label-switch" for="switch"></label>
+            <label id="dark-theme" for="switch">Dark</label>
+        </div>
+    </header>
+    <main class="main">
+        <a href="https://www.alura.com.br/" target="_blank"><img class="main__text-section__logo" src="./assets/imgs/Logo_menor.png" alt="Logo da Alura"></a>
+        <section class="main__text-section">
+            <div class="main__text-section__texts">
+                <textarea id="text-to-treat" autocomplete="off" autocapitalize="none" placeholder="Digite seu texto"></textarea>
+                <p><img src="./assets/imgs/bi_exclamation-circle-fill.png" alt=""> Apenas letras minúsculas e sem acento.</p>
+            </div>
+            <div class="main__text-section__buttons">
+                <button onclick="acquireText('encrypt')" id="encrypt-button">Criptografar</button>
+                <button onclick="acquireText('decrypt')" id="decrypt-button">Descriptografar</button>             
+            </div>            
+        </section>
+        <section class="main__answer-section" >
+            <div id="div-to-hide" class="main__answer-section__initial">
+                <img src="./assets/imgs/High quality products 1 1.png" alt="Imagem de uma mulher sentada examinando um diamante com uma lente de aumento">
+                <p><span>Nenhuma mensagem encontrada</span></p>
+                <p>digite um texto que você deseja criptografar ou descriptografar.</p>
+            </div>
+            <div id="div-to-show" class="main__answer-section__text" style="display: none;" >
+                <textarea id="final-text-output" autocomplete="off" readonly></textarea>
+                <button onclick="copyButton()">Copiar</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por: <strong>Guilherme Krieck</strong></p>
+        <a href="https://github.com/GuiKrieck" target="_blank"><img src="./assets/imgs/github.png" alt="Logo do Github"></a>
+        <a href="https://www.linkedin.com/in/guilherme-krieck/" target="_blank"><img src="./assets/imgs/linkedin.png" alt="Logo do Linkedin"></a>
+    </footer>
+    <script src="./assets/scripts/app.js" defer></script>
+</body>
+</html>
